@@ -33,12 +33,14 @@ class ::TaskOne
       line.each_char do |chr|
         chr_matches = chr.match(/\d/)
 
-        if !found_first && chr_matches
+        next unless chr_matches
+
+        unless found_first
           first_num = chr
           found_first = true
         end
 
-        last_num = chr if chr_matches
+        last_num = chr
       end
 
       merged_num = ::String.new << first_num << last_num
@@ -56,6 +58,8 @@ class ::TaskOne
   end
 end
 
-task = ::TaskOne.new ::ARGV[0]
+FILENAME = ::ARGV[0]
+
+task = ::TaskOne.new FILENAME
 result = task.call
 puts result
