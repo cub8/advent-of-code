@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-# Task one in Advent of Code
-class ::TaskOne
+# Task one part one in Advent of Code
+class ::PartOne
   attr_reader :input_data, :numbers, :result
 
   # @param filename [String]
@@ -60,6 +60,6 @@ end
 
 FILENAME = ::ARGV[0]
 
-task = ::TaskOne.new FILENAME
+task = ::PartOne.new FILENAME
 result = task.call
 puts result

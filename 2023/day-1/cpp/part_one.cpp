@@ -39,9 +39,7 @@ vector<int> find_numbers(vector<string> lines) {
       last_num = chr;
     }
 
-    string number;
-    number += first_num;
-    number += last_num;
+    string number = {first_num, last_num};
 
     numbers.push_back(stoi(number));
   }

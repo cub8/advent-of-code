@@ -1,5 +1,6 @@
 # advent-of-code
 When running tasks you have to pass filename from command line like this:
+
 a) Ruby
 ```sh
 # inside day-X directory, where X is day number
